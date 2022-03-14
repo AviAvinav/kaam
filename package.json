@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "type": "module",
   "scripts": {
-    "dev": "nodemon main.js",
+    "dev": "ts-node main.ts",
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
   },
   "husky": {
@@ -31,6 +30,7 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.3.5",
     "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
     "typescript": "^4.6.2"
   },
   "dependencies": {
