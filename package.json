@@ -18,7 +18,7 @@
       "eslint . --ignore-path package.json --fix"
     ]
   },
-  "author": "Avi Avinav",
+  "author": "Avi Avinav <aviavinav2004@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^7.32.0",
