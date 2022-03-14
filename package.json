@@ -15,7 +15,7 @@
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
-      "eslint . --ignore-path package.json --fix"
+      "eslint . --ext .ts --ignore-path package.json --fix"
     ]
   },
   "author": "Avi Avinav <aviavinav2004@gmail.com>",
