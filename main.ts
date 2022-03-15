@@ -5,6 +5,9 @@ import * as inquirer from 'inquirer';
 import * as fs from 'fs';
 import * as path from 'path';
 
+// eslint-disable-next-line import/no-unresolved, import/extensions
+import createDirectory from './functions/createDirectory';
+
 const CHOICES = fs.readdirSync(path.join(__dirname, 'templates'));
 
 const QUESTIONS = [
@@ -40,6 +43,14 @@ const QUESTIONS = [
   },
 ];
 
+const WORKING_DIR = process.cwd();
+
 inquirer.prompt(QUESTIONS).then((answers) => {
-  console.log(answers);
+  // eslint-disable-next-line prefer-destructuring, dot-notation
+  const name = answers['name'];
+
+  const targetPath = path.join(WORKING_DIR, name);
+
+  // eslint-disable-next-line no-useless-return
+  if (!createDirectory(targetPath)) return;
 });
