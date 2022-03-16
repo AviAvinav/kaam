@@ -21,6 +21,7 @@
     ]
   },
   "author": "Avi Avinav <aviavinav2004@gmail.com>",
+  "repository": "https://github.com/AviAvinav/kaam",
   "license": "MIT",
   "devDependencies": {
     "@types/inquirer": "^8.2.0",
