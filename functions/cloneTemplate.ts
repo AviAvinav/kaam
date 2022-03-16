@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
-import shell from 'shelljs';
+import * as shell from 'shelljs';
 import { createSpinner } from 'nanospinner';
-import chalk from 'chalk';
+import * as chalk from 'chalk';
 
 const cloneTemplate = async (template: string, name: string, pkgManager: string) => {
   const spinner = createSpinner('Generating project...').start();

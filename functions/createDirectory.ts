@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-console */
 import * as fs from 'fs';
-import chalk from 'chalk';
+import * as chalk from 'chalk';
 
 const createDirectory = (targetPath: string) => {
   if (fs.existsSync(targetPath)) {
