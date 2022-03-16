@@ -39,6 +39,7 @@ To make the size smaller the templates folder is not present in the npm package 
 - Prettier config generation
 - Eslint config generation
 - License generation
+- Open with code
 
 ## Contributing
 
