@@ -1,15 +1,9 @@
-// import shell from 'shelljs';
+/* eslint-disable no-console */
+import shell from 'shelljs';
 
-// const SKIP_FILES = [
-//   '.git',
-//   'node_modules',
-//   'yarn.lock',
-//   'package-lock.json',
-//   'pnpm-lock.yaml',
-// ];
+const cloneTemplate = (template: string, name: string) => {
+  shell.exec(`cd ${name} && npx degit github:AviAvinav/nooli/templates/${template} && yarn install`, { silent: true });
+  console.log('Done');
+};
 
-// const WORKING_DIR = process.cwd();
-
-// const cloneTemplate = (template: string, name: string) => {
-
-// }
+export default cloneTemplate;

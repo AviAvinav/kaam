@@ -1,12 +1,14 @@
 #!/usr/bin/env node
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
 
 import * as inquirer from 'inquirer';
 
 import * as fs from 'fs';
 import * as path from 'path';
 
-// eslint-disable-next-line import/no-unresolved, import/extensions
 import createDirectory from './functions/createDirectory';
+import cloneTemplate from './functions/cloneTemplate';
 
 const CHOICES = fs.readdirSync(path.join(__dirname, 'templates'));
 
@@ -24,18 +26,6 @@ const QUESTIONS = [
     default: 'new-project',
   },
   {
-    name: 'license',
-    type: 'list',
-    message: 'Choose a license: ',
-    choices: ['MIT', 'ISC', 'Apache', 'GPLv3', 'BSD', 'None'],
-  },
-  {
-    name: 'prettier',
-    type: 'list',
-    message: 'Would you like to use Prettier?',
-    choices: ['Yes', 'No'],
-  },
-  {
     name: 'pkg-manager',
     type: 'list',
     message: 'Choose a package manager: ',
@@ -48,9 +38,13 @@ const WORKING_DIR = process.cwd();
 inquirer.prompt(QUESTIONS).then((answers) => {
   // eslint-disable-next-line prefer-destructuring, dot-notation
   const name = answers['name'];
+  // eslint-disable-next-line prefer-destructuring, dot-notation
+  const template = answers['template'];
 
   const targetPath = path.join(WORKING_DIR, name);
 
   // eslint-disable-next-line no-useless-return
   if (!createDirectory(targetPath)) return;
+
+  cloneTemplate(template, name);
 });
