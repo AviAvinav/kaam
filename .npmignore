@@ -1,0 +1,5 @@
+templates/*
+node_modules/*
+.husky/*
+.git/*
+pnpm-lock.yaml
