@@ -6,6 +6,7 @@
   "bin": "main.js",
   "scripts": {
     "dev": "ts-node main.ts",
+    "build": "tsc main.ts",
     "lint": "eslint . --ext .ts --ignore-path package.json --fix",
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
   },
