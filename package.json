@@ -1,7 +1,7 @@
 {
   "name": "kaam",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.3",
+  "description": "A cli tool for rapidly generating your projects.",
   "main": "main.js",
   "bin": "main.js",
   "scripts": {
