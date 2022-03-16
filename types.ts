@@ -8,3 +8,5 @@ export type templateType = 'next-js-auth0-tailwind'|
   'typescript-project';
 
 export type pkgManagerType = 'npm' | 'yarn' | 'pnpm';
+
+export type choice = 'Yes' | 'No';
