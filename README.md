@@ -40,6 +40,8 @@ To make the size smaller the templates folder is not present in the npm package 
 - Eslint config generation
 - License generation
 - Open with code
+- Git repo initialize
+- Create github repo
 
 ## Contributing
 
