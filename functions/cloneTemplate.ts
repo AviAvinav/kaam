@@ -8,7 +8,7 @@ const cloneTemplate = async (template: string, name: string, pkgManager: string)
   await new Promise((resolve) => { setTimeout(resolve, 1000); });
 
   try {
-    shell.exec(`cd ${name} && npx degit github:AviAvinav/nooli/templates/${template} && ${pkgManager} install`, { silent: true });
+    shell.exec(`cd ${name} && npx degit github:AviAvinav/kaam/templates/${template} && ${pkgManager} install`, { silent: true });
     await new Promise((resolve) => { setTimeout(resolve, 1000); });
     spinner.success({ text: '\nProject generated successfully! 🚀 🚀 🚀' });
     console.log(chalk.green(`\nI have already run '${pkgManager} install' for you, so go ahead and dive in.`));
