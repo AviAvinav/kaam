@@ -3,7 +3,10 @@ import * as shell from 'shelljs';
 import { createSpinner } from 'nanospinner';
 import * as chalk from 'chalk';
 
-const cloneTemplate = async (template: string, name: string, pkgManager: string) => {
+// eslint-disable-next-line import/no-unresolved, import/extensions
+import { pkgManagerType, templateType } from '../types';
+
+const cloneTemplate = async (template: templateType, name: string, pkgManager: pkgManagerType) => {
   const spinner = createSpinner('Generating project...').start();
   await new Promise((resolve) => { setTimeout(resolve, 1000); });
 
