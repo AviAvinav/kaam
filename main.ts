@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
+/* eslint-disable prefer-destructuring */
+/* eslint-disable dot-notation */
 
 import * as inquirer from 'inquirer';
 
@@ -41,16 +43,19 @@ const QUESTIONS = [
     message: 'Choose a package manager: ',
     choices: ['yarn', 'npm', 'pnpm'],
   },
+  // {
+  //   name: 'prettier',
+  //   type: 'list',
+  //   message: 'Would you like to create a Prettier config?',
+  //   choices: ['Yes', 'No'],
+  // },
 ];
 
 const WORKING_DIR = process.cwd();
 
 inquirer.prompt(QUESTIONS).then((answers) => {
-  // eslint-disable-next-line prefer-destructuring, dot-notation
   const name: string = answers['name'];
-  // eslint-disable-next-line prefer-destructuring, dot-notation
   const template: templateType = answers['template'];
-  // eslint-disable-next-line prefer-destructuring, dot-notation
   const pkgManager: pkgManagerType = answers['pkg-manager'];
 
   const targetPath = path.join(WORKING_DIR, name);
