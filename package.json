@@ -1,7 +1,7 @@
 {
   "name": "kaam",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.3",
+  "description": "A cli tool for rapidly generating your projects.",
   "main": "main.js",
   "bin": "main.js",
   "scripts": {
@@ -21,6 +21,7 @@
     ]
   },
   "author": "Avi Avinav <aviavinav2004@gmail.com>",
+  "homepage": "https://github.com/AviAvinav/kaam#readme",
   "repository": "https://github.com/AviAvinav/kaam",
   "license": "MIT",
   "devDependencies": {
