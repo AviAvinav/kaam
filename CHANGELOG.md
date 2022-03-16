@@ -10,5 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Update `.npmignore` to remove unnecessary development files
+- Update scripts
 
 ### Added
+- Add types for `templates` & `package managers`.
