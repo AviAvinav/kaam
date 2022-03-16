@@ -40,11 +40,13 @@ inquirer.prompt(QUESTIONS).then((answers) => {
   const name = answers['name'];
   // eslint-disable-next-line prefer-destructuring, dot-notation
   const template = answers['template'];
+  // eslint-disable-next-line prefer-destructuring, dot-notation
+  const pkgManager = answers['pkg-manager'];
 
   const targetPath = path.join(WORKING_DIR, name);
 
   // eslint-disable-next-line no-useless-return
   if (!createDirectory(targetPath)) return;
 
-  cloneTemplate(template, name);
+  cloneTemplate(template, name, pkgManager);
 });
