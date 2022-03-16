@@ -4,13 +4,21 @@
 
 import * as inquirer from 'inquirer';
 
-import * as fs from 'fs';
 import * as path from 'path';
 
 import createDirectory from './functions/createDirectory';
 import cloneTemplate from './functions/cloneTemplate';
 
-const CHOICES = fs.readdirSync(path.join(__dirname, 'templates'));
+const CHOICES: string[] = [
+  'next-js-auth0-tailwind',
+  'next-js-tailwind-css',
+  'next-js-tailwind-datocms',
+  'next-js-ts-tailwind',
+  'react-js',
+  'react-js-with-typescript',
+  'react-native-typescript',
+  'typescript-project',
+];
 
 const QUESTIONS = [
   {
