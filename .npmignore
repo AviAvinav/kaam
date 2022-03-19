@@ -3,3 +3,12 @@ node_modules/*
 .husky/*
 .git/*
 pnpm-lock.yaml
+.eslintrc.json
+.gitignore
+.github/*
+CHANGELOG.md
+CONTRIBUTING.md
+*.ts
+content/*
+yarn.lock
+package-lock.json

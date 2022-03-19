@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
+/* eslint-disable prefer-destructuring */
+/* eslint-disable dot-notation */
 
 import * as inquirer from 'inquirer';
 
@@ -9,7 +11,9 @@ import * as path from 'path';
 import createDirectory from './functions/createDirectory';
 import cloneTemplate from './functions/cloneTemplate';
 
-const CHOICES: string[] = [
+import { pkgManagerType, templateType } from './types';
+
+const CHOICES: templateType[] = [
   'next-js-auth0-tailwind',
   'next-js-tailwind-css',
   'next-js-tailwind-datocms',
@@ -18,6 +22,8 @@ const CHOICES: string[] = [
   'react-js-with-typescript',
   'react-native-typescript',
   'typescript-project',
+  'solid-js',
+  'solid-js-with-typescript',
 ];
 
 const QUESTIONS = [
@@ -39,17 +45,20 @@ const QUESTIONS = [
     message: 'Choose a package manager: ',
     choices: ['yarn', 'npm', 'pnpm'],
   },
+  // {
+  //   name: 'prettier',
+  //   type: 'list',
+  //   message: 'Would you like to create a Prettier config?',
+  //   choices: ['Yes', 'No'],
+  // },
 ];
 
 const WORKING_DIR = process.cwd();
 
 inquirer.prompt(QUESTIONS).then((answers) => {
-  // eslint-disable-next-line prefer-destructuring, dot-notation
-  const name = answers['name'];
-  // eslint-disable-next-line prefer-destructuring, dot-notation
-  const template = answers['template'];
-  // eslint-disable-next-line prefer-destructuring, dot-notation
-  const pkgManager = answers['pkg-manager'];
+  const name: string = answers['name'];
+  const template: templateType = answers['template'];
+  const pkgManager: pkgManagerType = answers['pkg-manager'];
 
   const targetPath = path.join(WORKING_DIR, name);
 
