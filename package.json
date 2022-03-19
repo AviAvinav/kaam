@@ -8,7 +8,7 @@
     "dev": "ts-node main.ts",
     "lint": "eslint . --ext .ts --ignore-path package.json --fix",
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
-    "publish": "tsc main.ts && npm publish"
+    "publish": "tsc main.ts && np"
   },
   "husky": {
     "hooks": {
@@ -36,6 +36,7 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.3.5",
     "nodemon": "^2.0.15",
+    "np": "^7.6.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.2"
   },
