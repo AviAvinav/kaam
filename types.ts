@@ -5,7 +5,9 @@ export type templateType = 'next-js-auth0-tailwind'|
   'react-js'|
   'react-js-with-typescript'|
   'react-native-typescript'|
-  'typescript-project';
+  'typescript-project' |
+  'solid-js'|
+  'solid-js-with-typescript';
 
 export type pkgManagerType = 'npm' | 'yarn' | 'pnpm';
 

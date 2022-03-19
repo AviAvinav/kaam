@@ -22,6 +22,8 @@ const CHOICES: templateType[] = [
   'react-js-with-typescript',
   'react-native-typescript',
   'typescript-project',
+  'solid-js',
+  'solid-js-with-typescript',
 ];
 
 const QUESTIONS = [
