@@ -1,6 +1,6 @@
 {
   "name": "kaam",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A cli tool for rapidly generating your projects.",
   "main": "main.js",
   "bin": "main.js",
@@ -8,7 +8,7 @@
     "dev": "ts-node main.ts",
     "lint": "eslint . --ext .ts --ignore-path package.json --fix",
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
-    "publish": "tsc main.ts && np"
+    "build": "tsc main.ts"
   },
   "husky": {
     "hooks": {
@@ -36,7 +36,6 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.3.5",
     "nodemon": "^2.0.15",
-    "np": "^7.6.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.2"
   },
