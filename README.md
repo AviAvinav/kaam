@@ -29,6 +29,8 @@ Answer three simple questions:
 
 That's it, your dependencies are already installed, dive in to your project.
 
+[![Kaam demo](https://res.cloudinary.com/marcomontalbano/image/upload/v1647693109/video_to_markdown/images/youtube--MkISwTRcIg0-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/MkISwTRcIg0 "Kaam demo")
+
 ## How it works:
 
 To make the size smaller the templates folder is not present in the npm package itself. The cli uses [degit](https://github.com/Rich-Harris/degit) to clone the project from the [github repo](https://github.com/AviAvinav/kaam).
