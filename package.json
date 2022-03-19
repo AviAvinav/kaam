@@ -25,12 +25,9 @@
   "repository": "https://github.com/AviAvinav/kaam",
   "license": "MIT",
   "devDependencies": {
-    "@types/ejs": "^3.1.0",
     "@types/inquirer": "^8.2.0",
     "@types/node": "^17.0.21",
-    "@types/sade": "^1.7.4",
     "@types/shelljs": "^0.8.11",
-    "@types/yargs": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.0.0",
     "eslint": "^7.32.0",
@@ -44,11 +41,8 @@
   },
   "dependencies": {
     "chalk": "4.1.2",
-    "ejs": "^3.1.6",
     "inquirer": "^8.2.1",
     "nanospinner": "^1.0.0",
-    "sade": "^1.8.1",
-    "shelljs": "^0.8.5",
-    "yargs": "^17.3.1"
+    "shelljs": "^0.8.5"
   }
 }
