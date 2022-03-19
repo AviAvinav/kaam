@@ -8,3 +8,7 @@ pnpm-lock.yaml
 .github/*
 CHANGELOG.md
 CONTRIBUTING.md
+*.ts
+content/*
+yarn.lock
+package-lock.json
