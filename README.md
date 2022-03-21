@@ -65,7 +65,7 @@ To make the size smaller the templates folder is not present in the npm package 
 
 ## Contributing
 
-Contributing insructions to be released soon.
+Contributing insructions are there in the contributing.md file.
 
 ## License
 
