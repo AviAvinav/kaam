@@ -4,7 +4,7 @@ First, let me thank you for taking out your time for trying to contribute to thi
 
 ## Developing
 
-Use the `v1.2.0-alpha` branch for development, make pull requests to this branch.
+Use the `dev` branch for development, make pull requests to this branch.
 
 To develop locally:
 
@@ -55,4 +55,3 @@ pnpm install
 8. Make sure to lint it with `yarn lint #or npm or pnpm`
 
 9. Now make a pull request and wait for it to be reviewed.
-
