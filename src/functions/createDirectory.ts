@@ -1,12 +1,12 @@
+import { redBright } from "colorette";
 import * as fs from "fs";
-import * as chalk from "chalk";
 import * as inquirer from "inquirer";
 
 const createDirectory = (targetPath: string) => {
   let rerun = false;
   if (fs.existsSync(targetPath)) {
     console.log(
-      chalk.redBright(
+      redBright(
         "A directory with the same name as the project already exists. Please use another name or delete the directory."
       )
     );
