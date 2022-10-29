@@ -6,7 +6,6 @@ import createDirectory from "./functions/createDirectory";
 import cloneTemplate from "./functions/cloneTemplate";
 
 import { pkgManagerType, templateType } from "./types";
-import chalk from "chalk";
 
 const CHOICES: templateType[] = [
   "next-js-auth0-tailwind",
@@ -52,11 +51,9 @@ const kaam = () => {
 
     const targetPath = path.join(WORKING_DIR, name);
 
-    if (createDirectory(targetPath).rerun) {
-      kaam();
+    if (createDirectory(targetPath).success) {
+      cloneTemplate(template, name, pkgManager);
     }
-
-    cloneTemplate(template, name, pkgManager);
   });
 };
 
